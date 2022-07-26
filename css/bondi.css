@@ -1,0 +1,267 @@
+:root {
+    --dark-color: #19283f;
+    --green-color: #00c7c0;
+    --red-color: #ff3150;
+    --yellow-color: #ffc501;
+    --bg-color: #eff7fa;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    border-color: transparent;
+}
+
+.main-btn:is(:hover, :focus) {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    border-color: transparent;
+    box-shadow: none;
+    outline: none;
+}
+
+.main-btn:hover {
+    background-color: var(--yellow-color);
+    color: var(--red-color);
+}
+
+.main-title::after {
+    position: absolute;
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Start Nav */
+nav {
+    background-color: var(--dark-color);
+}
+
+nav ul .nav-item a {
+    color: white;
+}
+
+nav ul .nav-item a:is(:hover, :focus, .active) {
+    color: var(--green-color);
+}
+
+nav .search {
+    border-left: solid 2px var(--green-color);
+}
+
+nav .search svg {
+    color: var(--green-color);
+}
+
+nav .navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border-color: white;
+}
+
+nav .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* End Nav */
+/* Start Landing */
+.landing {
+    min-height: calc(100vh - 72px);
+    background-color: var(--dark-color);
+}
+
+/* End Landing */
+/* Start Features */
+.features .icons-holder {
+    height: 120px;
+    margin-top: 50px;
+}
+
+.features .icons-holder .number {
+    font-size: 12rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--bg-color);
+}
+
+.features .icons-holder .icon {
+    font-size: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--green-color);
+}
+
+.features .feat h3 {
+    color: var(--yellow-color);
+}
+
+/* End Features */
+/* Start Our Work */
+.work {
+    background-color: var(--bg-color);
+}
+
+.work ul .active {
+    background-color: var(--red-color);
+    color: #ffc501;
+}
+
+.work ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+
+.work .box {
+    background-color: white;
+    padding: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00c7c075;
+    color: white;
+    transition: 0.3s;
+    transform: translateX(calc(-100% - 10px));
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.work .box:hover::before {
+    transform: translate(0);
+}
+
+/* End Our Work */
+/* Start Stuff */
+.stuff .myp {
+    max-width: 600px;
+}
+
+/* End Stuff */
+/* Start team */
+.team {
+    background-color: var(--bg-color);
+}
+
+.team h2 {
+    color: var(--yellow-color);
+}
+
+.team .box h4 {
+    background-color: var(--green-color);
+}
+
+.team .box blockquote {
+    height: 140px;
+}
+
+/* End team */
+/* Start Project */
+.project {
+    background-color: var(--dark-color);
+}
+
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe h4 {
+    color: var(--dark-color);
+}
+
+.subscribe input[type="text"] {
+    color: white;
+}
+
+.subscribe input[type="text"]::placeholder {
+    color: white;
+}
+
+.subscribe input[type="text"]:focus {
+    outline: none;
+}
+
+.subscribe .btn {
+    color: var(--yellow-color);
+    background-color: var(--dark-color);
+    width: 100%;
+}
+
+/* End Subscribe */
+/* Start Footer */
+footer {
+    background-color: var(--dark-color);
+}
+
+footer .graph {
+    color: var(--green-color);
+}
+
+footer .bondi {
+    color: var(--yellow-color);
+}
+
+footer a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .5);
+}
+
+footer .links li,
+footer .about li {
+    transition: .3s;
+}
+
+footer .links li:hover,
+footer .about li:hover {
+    transform: translateX(10px);
+}
+
+footer .links a:hover,
+footer .about a:hover {
+    color: var(--yellow-color);
+}
+
+footer .contact svg {
+    width: 35px;
+    height: 35px;
+}
+
+footer .facebook {
+    background-color: #1877f2;
+}
+
+footer .twitter {
+    background-color: #1ec4ff;
+}
+
+footer .google {
+    background-color: #ff4032;
+}
+
+footer .basketball {
+    background-color: #ff3298;
+}
+
+/* End Footer */
